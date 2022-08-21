@@ -1,18 +1,23 @@
-import React from "react";
-
 const ArticleContent = [
     {
-        name: "fdsafsd",
+        name: "a",
         title: "abc",
         content: [
             `sdfsdafdasf`
         ]
     },
     {
-        name: "sdfsdaf",
+        name: "b",
         title: "def",
         content: [
             `sdafdsafsdafdsafeasdfsd`
+        ]
+    },
+    {
+        name: "c",
+        title: "ghi",
+        content: [
+            `sdafsd`
         ]
     }
 ]

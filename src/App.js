@@ -5,7 +5,7 @@ import Article from './pages/Article';
 import ArticleList from './pages/ArticleList';
 import Navbar from './components/Navbar';
 import Error from './pages/Error';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
