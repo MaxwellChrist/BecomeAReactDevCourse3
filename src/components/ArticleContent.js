@@ -1,6 +1,6 @@
 import React from "react";
 
-const articles = [
+const ArticleContent = [
     {
         name: "fdsafsd",
         title: "abc",
@@ -17,4 +17,4 @@ const articles = [
     }
 ]
 
-export default articles
+export default ArticleContent
