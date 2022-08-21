@@ -3,12 +3,14 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Article from './pages/Article';
 import ArticleList from './pages/ArticleList';
+import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Navbar />
         <div id="page-body">
           <Routes>
             <Route path="/" element={<Home />}/>
