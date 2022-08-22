@@ -4,6 +4,7 @@ import { MongoClient } from 'mongodb';
 
 const app = express();
 app.use(bodyParser.json());
+app.use((req, res, next) => { res.header("Access-Control-Allow-Origin", "*"); next(); })
 
 const setupDB = async (item, errorResponse) => {
     try {
