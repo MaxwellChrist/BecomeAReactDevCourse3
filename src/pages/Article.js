@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import ArticleContent from '../components/ArticleContent'
 import ArticleListGen from '../components/ArticleListGen'
 import Error from './Error'
+import CommentListGen from '../components/CommentsListGen'
 
 const Article = () => {
     const params = useParams()
@@ -17,9 +18,6 @@ const Article = () => {
         fetchData()
     }, [params.name])
 
-
-
-
     const article = ArticleContent.find(item => item.name === params.name)
     if (!article) return <Error />
     const otherArticles = ArticleContent.filter(item => item.name !== params.name)
@@ -30,6 +28,7 @@ const Article = () => {
             {article.content.map((par, key) => (
                 <p key={key}>{par}</p>
             ))}
+            <CommentListGen comments={articleInfo.comments} />
             <h3>Other Articles</h3>
             <ArticleListGen articles={otherArticles} />
         </>
