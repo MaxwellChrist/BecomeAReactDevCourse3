@@ -20,13 +20,6 @@ const ArticleContent = [
             `content for c`
         ]
     },
-    {
-        name: "d",
-        title: "jkl",
-        content: [
-            `content for d`
-        ]
-    }
 ]
 
 export default ArticleContent
