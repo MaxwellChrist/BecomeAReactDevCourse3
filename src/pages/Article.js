@@ -5,6 +5,7 @@ import ArticleListGen from '../components/ArticleListGen'
 import Error from './Error'
 import CommentListGen from '../components/CommentsListGen'
 import Upvotes from '../components/Upvotes'
+import CommentAdder from '../components/CommentAdder'
 
 const Article = () => {
     const params = useParams()
@@ -29,6 +30,7 @@ const Article = () => {
                 <p key={key}>{par}</p>
             ))}
             <CommentListGen comments={articleInfo.comments} />
+            <CommentAdder name={params.name} setArticleInfo={setArticleInfo} />
             <h3>Other Articles</h3>
             <ArticleListGen articles={otherArticles} />
         </>
