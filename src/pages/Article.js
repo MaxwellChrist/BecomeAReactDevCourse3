@@ -4,6 +4,7 @@ import ArticleContent from '../components/ArticleContent'
 import ArticleListGen from '../components/ArticleListGen'
 import Error from './Error'
 import CommentListGen from '../components/CommentsListGen'
+import Upvotes from '../components/Upvotes'
 
 const Article = () => {
     const params = useParams()
@@ -12,7 +13,6 @@ const Article = () => {
         const fetchData = async() => {
             const result = await fetch(`http://localhost:8000/api/articles/${params.name}`)
             const resultBody = await result.json()
-            console.log(resultBody)
             setArticleInfo(resultBody)
         }
         fetchData()
@@ -24,7 +24,7 @@ const Article = () => {
     return (
         <>
             <h1>This is the {article.title} article</h1>
-            <p>This post has been upvoted {articleInfo.upvotes} times</p>
+            <Upvotes name={params.name} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
             {article.content.map((par, key) => (
                 <p key={key}>{par}</p>
             ))}
